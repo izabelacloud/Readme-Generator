@@ -162,7 +162,13 @@ function writeToFile(fileName, data) {
 
 promptUser()
     .then(userAnswerData => {
-    return generateReadme(userAnswerData)
+    return generateReadme(userAnswerData);
+    })
+    .then(pageREADME => {
+        return writeFile(pageREADME);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse)
     })
     .catch(err => {
         console.log(err);
