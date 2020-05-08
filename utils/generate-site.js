@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const writeFile = fileContent => {
+const writeToFile = fileContent => {
     return new Promise((resolve, reject) => {
         fs.writeFile("readme.md", fileContent, err => {
             //if there is an error, reject the Promise and send the error to the Promise's `.catch()` method
@@ -20,4 +20,4 @@ const writeFile = fileContent => {
 }
 
 
-module.exports = {writeFile};
+module.exports = {writeToFile};

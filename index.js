@@ -1,5 +1,5 @@
 //importing the generate-site.js and the writeFile function
-const { writeFile } = require('./utils/generate-site.js');
+const { writeToFile } = require('./utils/generate-site.js');
 
 
 
@@ -136,7 +136,7 @@ const questions = [
 
 //function to initialize program
 //function to invoke the inquirer with where the questions array is passed in
-const promptUser = (userAnswerData) => {
+const init = (userAnswerData) => {
     // If there's is no data no 'projects' array property, create one
 	if (!userAnswerData) {
 		userAnswerData = [];
@@ -150,22 +150,19 @@ const promptUser = (userAnswerData) => {
 }
 
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+// // function to write README file
+// function writeToFile(fileName, data) {
+// }
 
 
 
 // function call to initialize program
-// init()
-// .then()
-
-promptUser()
+init()
     .then(userAnswerData => {
     return generateReadme(userAnswerData);
     })
-    .then(pageREADME => {
-        return writeFile(pageREADME);
+    .then((fileName, data) => {
+        return writeToFile(fileName, data);
     })
     .then(writeFileResponse => {
         console.log(writeFileResponse)
