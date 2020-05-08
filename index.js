@@ -1,6 +1,13 @@
+//importing the generate-site.js and the writeFile function
+const { writeFile } = require('./utils/generate-site.js');
+
+
+
 //inquirer initiation
 const inquirer = require("inquirer");
 // console.log(inquirer);
+
+const generateReadme = require("./utils/generateMarkdown.js");
 
 
 
@@ -129,7 +136,7 @@ const questions = [
 
 //function to initialize program
 //function to invoke the inquirer with where the questions array is passed in
-const init = (userAnswerData) => {
+const promptUser = (userAnswerData) => {
     // If there's is no data no 'projects' array property, create one
 	if (!userAnswerData) {
 		userAnswerData = [];
@@ -139,7 +146,7 @@ const init = (userAnswerData) => {
         console.log(userAnswers);
         userAnswerData.push(userAnswers);
         console.log(userAnswerData);
-    })
+        })
 }
 
 
@@ -150,5 +157,15 @@ function writeToFile(fileName, data) {
 
 
 // function call to initialize program
-init();
+// init()
+// .then()
+
+promptUser()
+    .then(userAnswerData => {
+    return generateReadme(userAnswerData)
+    })
+    .catch(err => {
+        console.log(err);
+      });
+    
 
