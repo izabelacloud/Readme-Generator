@@ -1,3 +1,4 @@
+// const fs = require("fs");
 //importing the generate-site.js and the writeFile function
 const { writeToFile } = require('./utils/generate-site.js');
 
@@ -136,40 +137,62 @@ const questions = [
 
 //function to initialize program
 //function to invoke the inquirer with where the questions array is passed in
-const init = (userAnswerData) => {
-    // If there's is no data no 'projects' array property, create one
-	if (!userAnswerData) {
-		userAnswerData = [];
-	}
-    return inquirer.prompt(questions)
-    .then(userAnswers => {
-        console.log(userAnswers);
-        userAnswerData.push(userAnswers);
-        console.log(userAnswerData);
-        })
-}
 
+// const init = (userAnswerData) => {
+//     // If there's is no data no 'projects' array property, create one
+// 	if (!userAnswerData) {
+// 		userAnswerData = [];
+// 	}
+//     // return inquirer.prompt(questions)
+//     return inquirer.prompt(questions)
+//     .then(userAnswers => {
+//         console.log(userAnswers);
+//         userAnswerData.push(userAnswers);
+//         console.log(userAnswerData);
+//         })
+// }
 
-// // function to write README file
-// function writeToFile(fileName, data) {
+// function init() {
+//     inquirer.prompt(questions)
+//     .then((inquirerResponses) => {
+//         // console.log(questions)
+//         // console.log(inquirerResponses)
+//         writeToFile("README.md", generateReadme({ ...inquirerResponses }));
+//     })
+    
+//     // {
+
+//     // });
+
+// // // function to write README file
+// // function writeToFile(fileName, data) {
 // }
 
 
+function init() {
+    inquirer.prompt(questions).then((inquirerResponses) => {
+      writeToFile("README.md", generateReadme({ ...inquirerResponses }));
+    })
+  }
+  
+  init();
+ 
+
 
 // function call to initialize program
-init()
-    .then(userAnswerData => {
-    return generateReadme(userAnswerData);
-    })
-    .then((fileName, data) => {
-        return writeToFile(fileName, data);
-        // console.log(fileName, data);
-    })
-    .then(writeFileResponse => {
-        console.log(writeFileResponse)
-    })
-    .catch(err => {
-        console.log(err);
-      });
+// init()
+    // .then(userAnswerData => {
+    // return generateReadme(userAnswerData);
+    // })
+    // .then(data => {
+    //     console.log(data);
+    //     return writeToFile(data);
+    // })
+    // .then(writeFileResponse => {
+    //     console.log(writeFileResponse)
+    // })
+    // .catch(err => {
+    //     console.log(err);
+    //   });
     
 
