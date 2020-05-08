@@ -163,6 +163,7 @@ init()
     })
     .then((fileName, data) => {
         return writeToFile(fileName, data);
+        // console.log(fileName, data);
     })
     .then(writeFileResponse => {
         console.log(writeFileResponse)
