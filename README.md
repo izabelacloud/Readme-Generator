@@ -1,10 +1,10 @@
-# Test project
-  ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
+# Readme-Generator
+  ![Github licence](http://img.shields.io/badge/license-GNUAGPLv3-blue.svg)
 
 
   ## Description
 
-  description
+  This project is aimed to showcase a functionality for Readme Generator using node.js
 
   ## Table of Contents
 
@@ -18,25 +18,25 @@
 
   ## Installation 
 
-  intructions
+  Clone the repository, refer to README.md
 
   ## Usage
 
-  usage
+  Quick README.md creation
    
   ## License
 
-  This project is licensed under the MIT.
+  This project is licensed under the GNUAGPLv3.
 
   ## Contributing
 
-  contrib
+  This project was developed by Izabela Petrovicova
 
   ## Tests
 
-  test
+  Test needs to be executed locally.
 
   ## Questions
 
-  If you have any questions about the repository, contact me directly at i.petrovicova@gmail.com. You can find more of my work at https://github.com/IzabelaCloud.
+  If you have any questions about the repository, contact me directly at i.petrovicova@gmail.com. You can find more of my work at https://github.com/izabelacloud.
 

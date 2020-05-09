@@ -120,7 +120,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Please select from the list of licenses: (Required)",
-        choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT", "BSD"],
+        choices: ["GNUAGPLv3", "GNUGPLv3", "GNULGPLv3", "Apache2.0", "MIT", "BSD"],
         validate: licenseSelection => {
             if (licenseSelection) {
                 return true;
