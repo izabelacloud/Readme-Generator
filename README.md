@@ -1,10 +1,10 @@
-# readme-generator
-  ![Github licence](http://img.shields.io/badge/license-GNUGPLv3-blue.svg)
+# kkd
+  ![Github licence](http://img.shields.io/badge/license-BSD-blue.svg)
 
 
   ## Description
 
-  Readme Generator is aimed to dynamically generate readme.md using node.js
+  ii
 
   ## Table of Contents
 
@@ -19,7 +19,7 @@
 
   ## Installation 
 
-  Please copy the repository and run it locally from node.js
+  jj
 
   ## User Story 
 
@@ -41,19 +41,19 @@
 
   ## Usage
 
-  Readme.md generator via node.js
+  kkkk
    
   ## License
 
-  This project is licensed under the GNUGPLv3.
+  This project is licensed under the BSD.
 
   ## Contributing
 
-  Izabela Petrovicova
+  jjj
 
   ## Tests
 
-  Please refer to the videos below.
+  jhh
 
   The video on how to test this application is included here: 
   1. [Walk-through Video - Clicks Only](https://drive.google.com/file/d/1ovzKQI11FcP-_ACyx3fUnvfE6kC0bc-9/view)
@@ -61,5 +61,5 @@
 
   ## Questions
 
-  If you have any questions about the repository, contact me directly at i.petrovicova@gmail.com. You can find more of my work at https://github.com/izabelacloud.
+  If you have any questions about the repository, contact me directly at ip. You can find more of my work at https://github.com/ip.
 

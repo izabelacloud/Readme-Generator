@@ -1,6 +1,5 @@
-//importing the generate-site.js and the writeFile function
-const { writeToFile } = require('./utils/generate-site.js');
-
+//initialization of the fs function
+const fs = require("fs");
 
 //inquirer initiation
 const inquirer = require("inquirer");
@@ -130,15 +129,22 @@ const questions = [
 
 
 
-//initialization of the functions
-function init() {
-    inquirer.prompt(questions)
-        .then((inquirerResponses) => {
-            writeToFile("README.md", generateReadme({ ...inquirerResponses }));
-    })
-  }
 
-//function call to init function
-init();
+//function to invoke the questions for the user
+const init = () => {
+    return inquirer.prompt(questions)
+}
+
+// //initialization of the function calls
+init()
+    .then(userAnswerData => {
+        const readUserAnswerData = generateReadme(userAnswerData);
+        console.log(userAnswerData);
+        fs.writeFile('README.md', readUserAnswerData, err => {
+                if(err) throw new Error(err);
+                 console.log('README.md created!');
+        });
+    });
+
 
 
