@@ -57,8 +57,9 @@ function generateMarkdown(data) {
 
   ${data.test}
 
-  The video on how to test this application is included here: [Walk-through Video - Clicks Only](https://drive.google.com/file/d/1ovzKQI11FcP-_ACyx3fUnvfE6kC0bc-9/view)
-  [Walk-through Video - With Description](https://drive.google.com/file/d/1ITaN_S5RpYnLkhPyPZF9TQDilI2YDxOU/view)
+  The video on how to test this application is included here: 
+  1. [Walk-through Video - Clicks Only](https://drive.google.com/file/d/1ovzKQI11FcP-_ACyx3fUnvfE6kC0bc-9/view)
+  1. [Walk-through Video - With Description](https://drive.google.com/file/d/1ITaN_S5RpYnLkhPyPZF9TQDilI2YDxOU/view)
 
   ## Questions
 
