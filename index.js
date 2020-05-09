@@ -68,7 +68,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "installation-instructions",
+        name: "installation",
         message: "Provide installation instructions: (Required)",
         validate: installationInstructionsInput => {
             if (installationInstructionsInput) {
@@ -106,7 +106,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "test-instructions",
+        name: "test",
         message: "Please enter Test Instructions: (Required)",
         validate: testInstructionsInput => {
             if (testInstructionsInput) {
@@ -117,10 +117,10 @@ const questions = [
         }
     },
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "Please select from the list of licenses: (Required)",
-        choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "The Unlicense"],
+        choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "BSD"],
         validate: licenseSelection => {
             if (licenseSelection) {
                 return true;
@@ -128,9 +128,13 @@ const questions = [
                 return false;
             }
         }
+
     }
 
 ];
+
+
+
 
 
 
@@ -170,29 +174,31 @@ const questions = [
 
 
 function init() {
-    inquirer.prompt(questions).then((inquirerResponses) => {
-      writeToFile("README.md", generateReadme({ ...inquirerResponses }));
+    inquirer.prompt(questions)
+        .then((inquirerResponses) => {
+            writeToFile("README.md", generateReadme({ ...inquirerResponses }));
     })
   }
   
-  init();
+init();
+// generateLicenseLink();
  
 
 
 // function call to initialize program
 // init()
-    // .then(userAnswerData => {
-    // return generateReadme(userAnswerData);
-    // })
-    // .then(data => {
-    //     console.log(data);
-    //     return writeToFile(data);
-    // })
-    // .then(writeFileResponse => {
-    //     console.log(writeFileResponse)
-    // })
-    // .catch(err => {
-    //     console.log(err);
-    //   });
+//     .then(userAnswerData => {
+//     return generateReadme(userAnswerData);
+//     })
+//     .then(data => {
+//         console.log(data);
+//         return writeToFile(data);
+//     })
+//     .then(writeFileResponse => {
+//         console.log(writeFileResponse)
+//     })
+//     .catch(err => {
+//         console.log(err);
+//       });
     
 
