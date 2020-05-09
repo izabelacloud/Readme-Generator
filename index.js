@@ -135,7 +135,7 @@ const init = () => {
     return inquirer.prompt(questions)
 }
 
-// //initialization of the function calls
+//initialization of the function calls
 init()
     .then(userAnswerData => {
         const readUserAnswerData = generateReadme(userAnswerData);
