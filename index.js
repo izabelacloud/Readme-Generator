@@ -1,15 +1,12 @@
-// const fs = require("fs");
 //importing the generate-site.js and the writeFile function
 const { writeToFile } = require('./utils/generate-site.js');
 
 
-
 //inquirer initiation
 const inquirer = require("inquirer");
-// console.log(inquirer);
 
+//importing the generateMarkdown file into the index.js file
 const generateReadme = require("./utils/generateMarkdown.js");
-
 
 
 // array of questions for user
@@ -128,77 +125,20 @@ const questions = [
                 return false;
             }
         }
-
     }
-
 ];
 
 
 
-
-
-
-
-//function to initialize program
-//function to invoke the inquirer with where the questions array is passed in
-
-// const init = (userAnswerData) => {
-//     // If there's is no data no 'projects' array property, create one
-// 	if (!userAnswerData) {
-// 		userAnswerData = [];
-// 	}
-//     // return inquirer.prompt(questions)
-//     return inquirer.prompt(questions)
-//     .then(userAnswers => {
-//         console.log(userAnswers);
-//         userAnswerData.push(userAnswers);
-//         console.log(userAnswerData);
-//         })
-// }
-
-// function init() {
-//     inquirer.prompt(questions)
-//     .then((inquirerResponses) => {
-//         // console.log(questions)
-//         // console.log(inquirerResponses)
-//         writeToFile("README.md", generateReadme({ ...inquirerResponses }));
-//     })
-    
-//     // {
-
-//     // });
-
-// // // function to write README file
-// // function writeToFile(fileName, data) {
-// }
-
-
+//initialization of the functions
 function init() {
     inquirer.prompt(questions)
         .then((inquirerResponses) => {
             writeToFile("README.md", generateReadme({ ...inquirerResponses }));
     })
   }
-  
+
+//function call to init function
 init();
-// generateLicenseLink();
- 
 
-
-// function call to initialize program
-// init()
-//     .then(userAnswerData => {
-//     return generateReadme(userAnswerData);
-//     })
-//     .then(data => {
-//         console.log(data);
-//         return writeToFile(data);
-//     })
-//     .then(writeFileResponse => {
-//         console.log(writeFileResponse)
-//     })
-//     .catch(err => {
-//         console.log(err);
-//       });
-    
 

@@ -1,10 +1,10 @@
-# Readme-Generator
-  ![Github licence](http://img.shields.io/badge/license-GNUAGPLv3-blue.svg)
+# readme-generator
+  ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
 
   ## Description
 
-  This project is aimed to showcase a functionality for Readme Generator using node.js
+  This project is aimed to demostrate the functionlity of the node js application and dynamically generate readme.md file with data based on user input.
 
   ## Table of Contents
 
@@ -18,23 +18,23 @@
 
   ## Installation 
 
-  Clone the repository, refer to README.md
+  For installation please download the repository / copy the repository and run it from the command line.
 
   ## Usage
 
-  Quick README.md creation
+  For readme.md generation purposes.
    
   ## License
 
-  This project is licensed under the GNUAGPLv3.
+  This project is licensed under the MIT.
 
   ## Contributing
 
-  This project was developed by Izabela Petrovicova
+  Built by Izabela Petrovicova
 
   ## Tests
 
-  Test needs to be executed locally.
+  To test please clone the repository and test locally using node.js
 
   ## Questions
 
